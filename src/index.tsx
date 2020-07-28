@@ -2,7 +2,7 @@ import * as React from 'react';
 import Folder from './Folder';
 import styled from 'styled-components';
 
-const Wrapper = styled.section`
+const Container = styled.section`
   padding: 12px;
   font-family: sans-serif;
   color: #606060;
@@ -12,13 +12,14 @@ const Wrapper = styled.section`
   }
 `;
 
-export const Thing = () => {
+const Wrapper: React.FC<{ children: React.FC }> = ({ children }) => {
   return (
-    <Wrapper>
+    <Container>
       <h1>React Directory</h1>
-      <Folder text="JavaScript" />
-      <Folder text="React" />
-      <Folder text="Rust" />
-    </Wrapper>
+      <p>...</p>
+      {children}
+    </Container>
   );
 };
+
+export { Folder, Wrapper };

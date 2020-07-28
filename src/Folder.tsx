@@ -22,9 +22,10 @@ const Text = styled.span`
   }
 `;
 
-type TreeProps = { text: String; children: any };
-
-const Folder = ({ text, children }: TreeProps) => {
+const Folder: React.FC<{ text: String; children: React.FC }> = ({
+  text,
+  children,
+}) => {
   return (
     <Wrapper>
       <FolderIcon />
