@@ -8,6 +8,11 @@ React Directory has been bootstrapped using *TSDX*.
 
 > If you’re new to TypeScript and React, checkout [this handy cheatsheet](https://github.com/sw-yx/react-typescript-cheatsheet/)
 
+## Todo
+- Error Handling
+- Start from non-root path
+- Write Tests
+
 ## Commands
 
 TSDX scaffolds your new library inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
