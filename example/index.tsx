@@ -13,11 +13,11 @@ const App = () => {
   return (
     <Container>
       <Wrapper>
-        <Folder text="JavaScript">
-          <Folder text="Closures">file_within</Folder>
+        <Folder text="JavaScript" key="root">
+          <Folder text="Closures" key="closures">
+            file_within
+          </Folder>
         </Folder>
-        <Folder text="React">file_within</Folder>
-        <Folder text="Rust">rust_files_within</Folder>
       </Wrapper>
     </Container>
   );

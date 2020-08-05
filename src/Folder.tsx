@@ -1,6 +1,7 @@
 import * as React from 'react';
 import FolderIcon from './icons/FolderIcon.js';
 import styled from 'styled-components';
+import { Switch, Link, Route } from 'react-router-dom';
 
 const Wrapper = styled.section`
   display: flex;
@@ -14,7 +15,6 @@ const Wrapper = styled.section`
 
 const Text = styled.span`
   display: flex;
-  align-items: center;
 
   &:hover {
     text-decoration: underline;
@@ -22,15 +22,18 @@ const Text = styled.span`
   }
 `;
 
-const Folder: React.FC<{ text: String; children: React.FC }> = ({
-  text,
-  children,
-}) => {
+const Folder: React.FC<{ text: string }> = ({ text, children }) => {
   return (
     <Wrapper>
       <FolderIcon />
-      <Text>{text}</Text>
-      <div>{children}</div>
+      <Link to="/folder">
+        <Text>{text}</Text>
+      </Link>
+      <div>
+        <Switch>
+          <Route path="/folder">{children}</Route>
+        </Switch>
+      </div>
     </Wrapper>
   );
 };

@@ -1,8 +1,17 @@
 import * as React from 'react';
 import Folder from './Folder';
 import styled from 'styled-components';
+import { Switch, BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 const Container = styled.section`
+  a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
   padding: 12px;
   font-family: sans-serif;
   color: #606060;
@@ -12,13 +21,21 @@ const Container = styled.section`
   }
 `;
 
-const Wrapper: React.FC<{ children: React.FC }> = ({ children }) => {
+const Wrapper: React.FC = ({ children }) => {
   return (
-    <Container>
-      <h1>React Directory</h1>
-      <p>...</p>
-      {children}
-    </Container>
+    <Router>
+      <Container>
+        <h1>React Directory</h1>
+        <Link to="../">
+          <p>...</p>
+        </Link>
+        <Switch>
+          <Route exact path="/">
+            {children}
+          </Route>
+        </Switch>
+      </Container>
+    </Router>
   );
 };
 
