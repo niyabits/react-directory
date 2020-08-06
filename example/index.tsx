@@ -1,7 +1,7 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Folder, Wrapper } from '../.';
+import { Directory } from '../.';
 import styled from 'styled-components';
 
 const Container = styled.main`
@@ -12,13 +12,7 @@ const Container = styled.main`
 const App = () => {
   return (
     <Container>
-      <Wrapper>
-        <Folder text="JavaScript" key="root">
-          <Folder text="Closures" key="closures">
-            file_within
-          </Folder>
-        </Folder>
-      </Wrapper>
+      <Directory />
     </Container>
   );
 };

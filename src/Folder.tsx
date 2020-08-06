@@ -30,9 +30,9 @@ const Folder: React.FC<{ text: string }> = ({ text, children }) => {
         <Text>{text}</Text>
       </Link>
       <div>
-        <Switch>
-          <Route path="/folder">{children}</Route>
-        </Switch>
+        <Route path="/folder">
+          <Switch>{children}</Switch>
+        </Route>
       </div>
     </Wrapper>
   );

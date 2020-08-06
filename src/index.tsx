@@ -1,7 +1,6 @@
 import * as React from 'react';
-import Folder from './Folder';
 import styled from 'styled-components';
-import { Switch, BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 const Container = styled.section`
   a {
@@ -21,22 +20,24 @@ const Container = styled.section`
   }
 `;
 
-const Wrapper: React.FC = ({ children }) => {
+const Directory: React.FC = () => {
   return (
     <Router>
       <Container>
         <h1>React Directory</h1>
-        <Link to="../">
-          <p>...</p>
-        </Link>
+        {/* Links of Folder */}
+        <Link to="../">...</Link>
+        <Link to="/folder">Folder</Link>
+        <Link to="/folder2">Folder2</Link>
+        {/* View of the folders */}
+        <hr />
         <Switch>
-          <Route exact path="/">
-            {children}
-          </Route>
+          <Route path="/folder">Folder 1 Contents</Route>
+          <Route path="/folder2">Folder 2 Contents</Route>
         </Switch>
       </Container>
     </Router>
   );
 };
 
-export { Folder, Wrapper };
+export { Directory };
