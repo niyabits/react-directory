@@ -20,6 +20,10 @@ const Container = styled.section`
   }
 `;
 
+// <Folder />
+// 1. All the Links (to display the links)
+// 2. Children of the links (to route)
+
 const Directory: React.FC = () => {
   return (
     <Router>
