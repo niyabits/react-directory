@@ -9,7 +9,7 @@ const Folder: React.FC<{ isLink: boolean; text: string }> = ({
   if (isLink) {
     return <Link to={text}>{text}</Link>;
   } else {
-    return <Route path={text}> {children}</Route>;
+    return <Route path={`/${text}`}> {children}</Route>;
   }
 };
 
