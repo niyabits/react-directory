@@ -1,5 +1,6 @@
 # React Directory
-THIS REPO IS STILL UNDER VERY ACTIVE DEVELOPMENT AND HAS NO STABILITY OR USABILITY.
+**THIS REPO IS STILL UNDER VERY ACTIVE DEVELOPMENT AND HAS NO STABILITY OR USABILITY.**
+
 React Directory is a small component library for creating directory like structures in React.
 *This library is still under active development*
 
