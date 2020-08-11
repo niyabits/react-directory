@@ -1,3 +1,5 @@
-import * as React from 'react';
+import DirWrapper from './DirWrapper';
+import File from './File';
+import Folder from './Folder';
 
-export { Directory };
+export { DirWrapper, File, Folder };

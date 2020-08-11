@@ -1,15 +1,14 @@
 import * as React from 'react';
-import { Link, Route } from 'react-router-dom';
-import LinkRenderer from 'LinkRenderer';
+import { Route, useHistory } from 'react-router-dom';
+import LinkRenderer from './LinkRenderer';
 
 const Folder: React.FC<{ path: string }> = ({ path, children }) => {
+  const history = useHistory();
   return (
     <Route exact path={path}>
       <>
-        <Link to="../">
-          <span>../</span>
-          <LinkRenderer children={children} />
-        </Link>
+        <button onClick={() => history.goBack()}>Back</button>
+        <LinkRenderer children={children} />
       </>
     </Route>
   );

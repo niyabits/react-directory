@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-const File = () => {
-  return <div>Hi There!</div>;
+const File: React.FC = ({ children }) => {
+  return <div>{children}</div>;
 };
 
 export default File;

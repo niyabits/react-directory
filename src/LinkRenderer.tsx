@@ -6,7 +6,11 @@ const LinkRenderer = ({ children }: React.PropsWithChildren<{}>) => {
     <>
       {React.Children.map(children as JSX.Element[], (child: JSX.Element) => {
         if (child.type !== File) {
-          return <Link to={child.props.path}>{child.props.path}</Link>;
+          return (
+            <div>
+              <Link to={child.props.path}>{child.props.path}</Link>;
+            </div>
+          );
         }
         return child;
       })}
