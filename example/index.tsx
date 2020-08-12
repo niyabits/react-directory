@@ -1,7 +1,7 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Thing } from '../.';
+import { Folder, DirWrapper, Router } from '../.';
 import styled from 'styled-components';
 
 const Container = styled.main`
@@ -13,7 +13,15 @@ const Container = styled.main`
 const App = () => {
   return (
     <Container>
-      <Thing />
+      <Router>
+        <DirWrapper>
+          <Folder path="/rust">
+            <Folder path="rust/something" />
+            <Folder path="rust/rustlings" />
+          </Folder>
+          <Folder path="/react"></Folder>
+        </DirWrapper>
+      </Router>
     </Container>
   );
 };

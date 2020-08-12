@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function SvgComponent() {
   return (
-    <svg viewBox="0 0 48 48" width="48px" height="48px">
+    <svg viewBox="0 0 48 48" width="30px" height="30px">
       <path
         fill="#FFA000"
         d="M40 12H22l-4-4H8c-2.2 0-4 1.8-4 4v8h40v-4c0-2.2-1.8-4-4-4z"

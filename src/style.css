@@ -1,0 +1,9 @@
+body {
+  font-size: 2rem;
+  color: red;
+}
+
+a {
+  font-family: 'sans-serif';
+  text-decoration: none;
+}
