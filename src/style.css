@@ -1,9 +1,32 @@
-body {
-  font-size: 2rem;
-  color: red;
+a {
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #121212;
+  padding: 0 12px;
 }
 
-a {
-  font-family: 'sans-serif';
-  text-decoration: none;
+a:hover {
+  text-decoration: underline;
+}
+
+.link {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.folder-label {
+  margin-left: 9px;
+}
+
+/* Back Button */
+.btn-back {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  margin-bottom: 9px;
+}
+
+.btn-back:hover {
+  text-decoration: underline;
 }

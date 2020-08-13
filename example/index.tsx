@@ -5,6 +5,7 @@ import { Folder, DirWrapper, Router } from '../.';
 import styled from 'styled-components';
 
 const Container = styled.main`
+  font-family: sans-serif;
   max-width: 700px;
   margin: auto;
   padding: 0 12px;
@@ -13,6 +14,7 @@ const Container = styled.main`
 const App = () => {
   return (
     <Container>
+      <h1>React Directory Example</h1>
       <Router>
         <DirWrapper>
           <Folder path="/rust">

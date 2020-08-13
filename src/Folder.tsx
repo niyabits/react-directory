@@ -7,9 +7,9 @@ const Folder: React.FC<{ path: string }> = ({ path, children }) => {
   return (
     <Route exact path={path}>
       <>
-        <a href="#" onClick={() => history.goBack()}>
-          ../
-        </a>
+        <button className="btn-back" onClick={() => history.goBack()}>
+          ← back
+        </button>
         <LinkRenderer children={children} />
       </>
     </Route>

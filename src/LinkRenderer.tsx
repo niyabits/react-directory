@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './style.css';
 import { Link } from 'react-router-dom';
 import FolderIcon from './icons/FolderIcon';
 
@@ -12,9 +13,11 @@ const LinkRenderer = ({ children }: React.PropsWithChildren<{}>) => {
           const currDir = pathArr[pathArr.length - 1];
 
           return (
-            <div>
-              <FolderIcon />
-              <Link to={path}>{currDir}</Link>
+            <div className="folder">
+              <Link to={path} className="link">
+                <FolderIcon />
+                <span className="folder-label">{currDir}</span>
+              </Link>
             </div>
           );
         }
