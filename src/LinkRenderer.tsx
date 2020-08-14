@@ -16,7 +16,7 @@ const LinkRenderer = ({ children }: React.PropsWithChildren<{}>) => {
             <div className="folder">
               <Link to={path} className="link">
                 <FolderIcon />
-                <span className="folder-label">{currDir}</span>
+                <span className="label">{currDir}</span>
               </Link>
             </div>
           );
