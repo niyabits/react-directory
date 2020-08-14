@@ -2,6 +2,7 @@ import * as React from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
 import FolderIcon from './icons/FolderIcon';
+import File from './File';
 
 const LinkRenderer = ({ children }: React.PropsWithChildren<{}>) => {
   return (
