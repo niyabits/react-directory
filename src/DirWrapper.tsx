@@ -23,7 +23,7 @@ const DirWrapper: React.FC = ({ children }) => {
   React.useEffect(() => {
     getScreen(children);
     setScreens(_childs.current);
-  }, [children]);
+  }, [children, getScreen]);
 
   return (
     <>
