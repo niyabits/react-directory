@@ -6,6 +6,7 @@ import Folder from './Folder';
 const DirWrapper: React.FC = ({ children }) => {
   const location = useLocation();
   const [screens, setScreens] = React.useState<React.ReactNode>([]);
+  const [initialPath, setInitialPath] = React.useState('');
   const _childs = React.useRef<React.ReactNode[]>([]);
 
   const getScreen = React.useCallback(childs => {
@@ -25,10 +26,16 @@ const DirWrapper: React.FC = ({ children }) => {
     setScreens(_childs.current);
   }, [children, getScreen]);
 
+  React.useEffect(() => {
+    setInitialPath(location.pathname);
+  }, []);
+
   return (
     <>
       <Switch>{screens}</Switch>
-      {location.pathname === '/' && <LinkRenderer children={children} />}
+      {location.pathname === initialPath && (
+        <LinkRenderer children={children} />
+      )}
     </>
   );
 };
