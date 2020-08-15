@@ -32,7 +32,7 @@
     "trailingComma": "es5"
   },
   "name": "react-directory",
-  "author": "Yash Gupta",
+  "author": "Yash Gupta <yashguptaofficial@gmail.com>",
   "module": "dist/react-directory.esm.js",
   "devDependencies": {
     "@types/react": "16.9.43",

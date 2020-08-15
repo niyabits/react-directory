@@ -18,10 +18,15 @@ const App = () => {
       <Router>
         <DirWrapper>
           <Folder path="/rust">
-            <Folder path="rust/something" />
-            <Folder path="rust/rustlings" />
+            <Folder path="rust/something"></Folder>
+            <Folder path="rust/rustlings"></Folder>
+            <File path="rust/rust-guide">Rust Guide.md</File>
           </Folder>
-          <Folder path="/react"></Folder>
+          <Folder path="/react">
+            <File path="/react/react-hooks-everything">
+              Everything about React Hooks.md
+            </File>
+          </Folder>
           <File path="/README.md"> README.md </File>
         </DirWrapper>
       </Router>
