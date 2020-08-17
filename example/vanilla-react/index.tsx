@@ -1,7 +1,7 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Folder, File, DirWrapper, Router } from '../.';
+import { Folder, File, DirWrapper, DirRouter } from '../../.';
 import styled from 'styled-components';
 
 const Container = styled.main`
@@ -15,7 +15,7 @@ const App = () => {
   return (
     <Container>
       <h1>React Directory Example</h1>
-      <Router>
+      <DirRouter>
         <DirWrapper>
           <Folder path="/rust">
             <Folder path="rust/something"></Folder>
@@ -29,7 +29,7 @@ const App = () => {
           </Folder>
           <File path="/README.md"> README.md </File>
         </DirWrapper>
-      </Router>
+      </DirRouter>
     </Container>
   );
 };
