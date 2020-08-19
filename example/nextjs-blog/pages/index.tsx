@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styled from '@emotion/styled';
+import { NextPage } from 'next';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -27,7 +28,11 @@ const BlogTitle = styled.h1`
 
 const title: string = 'Next.js + TypeScript';
 
-export default function Home() {
+interface Props {
+  blogCategory: string;
+}
+
+const Home: NextPage<Props> = ({ blogCategory }) => {
   return (
     <Container>
       <Head>
@@ -37,7 +42,16 @@ export default function Home() {
 
       <Main>
         <BlogTitle>{title}</BlogTitle>
+        <div>My blog about {blogCategory}</div>
       </Main>
     </Container>
   );
-}
+};
+
+export default Home;
+
+Home.getInitialProps = () => {
+  return {
+    blogCategory: 'Books',
+  };
+};
