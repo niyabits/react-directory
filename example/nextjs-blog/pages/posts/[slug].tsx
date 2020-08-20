@@ -1,16 +1,21 @@
-import React from 'react'
-import { NextPage } from 'next'
+import React from 'react';
+import { GetStaticProps } from 'next';
+import matter from 'gray-matter';
 
-export default function PostTemplate: NextPage<props> (props) {
-  return (
-    <div>
-      Here we'll load "{props.slug}"
-    </div>
-  )
-}
+const PostTemplate: GetStaticProps = ({ slug }) => (
+  <div>Here we'll load "{slug}"</div>
+);
 
-PostTemplate.getInitialProps = async (context) => {
-  const {slug} = context.query 
+export default PostTemplate;
 
-  return {slug}
-}
+PostTemplate.getStaticProps = async context => {
+  const { slug } = context.query;
+
+  // Import our .md file using the `slug` from the URL
+  const content = await import(`../../content/${slug}.md`);
+
+  // Parse .md data through `matter`
+  const data = matter(content.default);
+
+  return { ...data };
+};
